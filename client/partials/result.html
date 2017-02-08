@@ -1,0 +1,36 @@
+<div ng-controller='userController'>
+
+  <div ng-controller='resultsController'>
+    <h4>{{curUser.user.name}} has ended the bid</h4>
+    <h1>Highest bidder & price for each item</h1>
+    Product 1
+    <br>
+      <img src="https://pbs.twimg.com/profile_images/775416954584608768/OUnpD7x_.jpg" style='width: 100px'>
+    <br>
+      <!-- {{lists1}} -->
+      <div ng-repeat='bid in lists1'>
+        <p ng-repeat='u in bid._user' ng-if='$last'>{{u.name}}</p>
+        <p ng-repeat='p in bid.price' ng-if='$last'>{{p}}</p>
+      </div> 
+    
+    Product 2
+    <br>
+      <img src="https://pbs.twimg.com/profile_images/775416954584608768/OUnpD7x_.jpg" style='width: 100px'>
+
+      <div ng-repeat='bid in lists2'>
+        <p ng-repeat='u in bid._user' ng-if='$last'>{{u.name}}</p>
+        <p ng-repeat='p in bid.price' ng-if='$last'>{{p}}</p>
+      </div> 
+
+    Product 3
+    <br>
+      <img src="https://pbs.twimg.com/profile_images/775416954584608768/OUnpD7x_.jpg" style='width: 100px'>
+
+      <div ng-repeat='bid in lists3'>
+        <p ng-repeat='u in bid._user' ng-if='$last'>{{u.name}}</p>
+        <p ng-repeat='p in bid.price' ng-if='$last'>{{p}}</p>
+      </div> 
+
+    <button ng-click='reset()'>Start bid again</button>
+  </div>
+</div>

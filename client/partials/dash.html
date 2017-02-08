@@ -1,0 +1,109 @@
+<div ng-controller='userController'>
+  <div ng-controller='bidController'>
+    <div id='product1'>
+      <p>Product 1</p>
+
+      <img src="https://pbs.twimg.com/profile_images/775416954584608768/OUnpD7x_.jpg" style='width: 100px'>
+
+      <br>
+
+      <input type='number' ng-model='product1.amount' placeholder='bid amount'>
+      <button ng-click='submitBid1(product1)'>Bid</button>
+      <p ng-repeat='e in err1'>{{e}}</p>
+
+      <br>
+
+      Current Bids:
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Bid</th>
+        </tr>
+        <tr>
+          <td ng-repeat='bid in lists1 | filter:search1'>
+            <p ng-repeat='u in bid._user'>{{u.name}}</p>
+          </td>
+          <td ng-repeat='bid in lists1 | filter:search1'>
+            <p ng-repeat='p in bid.price'>${{p}}</p>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+      Search:
+      <p>**You may search with name of the bidder or amount of bid placed (omit $ sign)** </p>
+      <input type='text' ng-model='search1' placeholder='search'>
+    </div>
+
+    <div id='product2'>
+      <p>Product 2</p>
+
+      <img src="https://pbs.twimg.com/profile_images/775416954584608768/OUnpD7x_.jpg" style='width: 100px'>
+
+      <br>
+
+      <input type='number' ng-model='product2.amount' placeholder='bid amount'>
+      <button ng-click='submitBid2(product2)'>Bid</button>
+      <p ng-repeat='e in err2'>{{e}}</p>
+
+      <br>
+
+      Current Bids:
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Bid</th>
+        </tr>
+        <tr>
+          <td ng-repeat='bid in lists2 | filter:search2'>
+            <p ng-repeat='u in bid._user'>{{u.name}}</p>
+          </td>
+          <td ng-repeat='bid in lists2 | filter:search2'>
+            <p ng-repeat='p in bid.price'>${{p}}</p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      Search:
+      <p>**You may search with name of the bidder or amount of bid placed (omit $ sign)** </p>
+      <input type='text' ng-model='search2' placeholder='search'>
+    </div>
+
+    <div id='product3'>
+      <p>Product 3</p>
+
+      <img src="https://pbs.twimg.com/profile_images/775416954584608768/OUnpD7x_.jpg" style='width: 100px'>
+
+      <br>
+
+      <input type='number' ng-model='product3.amount' placeholder='bid amount'>
+      <button ng-click='submitBid3(product3)'>Bid</button>
+      <p ng-repeat='e in err3'>{{e}}</p>
+
+      <br>
+
+      Current Bids:
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Bid</th>
+        </tr>
+        <tr>
+          <td ng-repeat='bid in lists3 | filter:search3'>
+            <p ng-repeat='u in bid._user'>{{u.name}}</p>
+          </td>
+          <td ng-repeat='bid in lists3 | filter:search3'>
+            <p ng-repeat='p in bid.price'>${{p}}</p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      Search:
+      <p>**You may search with name of the bidder or amount of bid placed (omit $ sign)** </p>
+      <input type='text' ng-model='search3' placeholder='search'>
+    </div>
+
+    <button ng-click='endBid()'>End Bid</button>
+  </div>
+
+</div>
