@@ -21,23 +21,23 @@ app.factory('bidFactory', function($http, $location, $route){
     })
   }
 
-  factory.getBid1 = function(cb){
-    $http.get('/bid/get_bid1').then(function(output){
-      cb(output);
+  // factory.getBid1 = function(cb){
+  //   $http.get('/bid/get_bid1').then(function(output){
+  //     cb(output);
 
-    })
-  }
-  factory.getBid2 = function(cb){
-    $http.get('/bid/get_bid2').then(function(output){
-      cb(output);
-    })
-  }
-  factory.getBid3 = function(cb){
-    $http.get('/bid/get_bid3').then(function(output){
-      cb(output);
+  //   })
+  // }
+  // factory.getBid2 = function(cb){
+  //   $http.get('/bid/get_bid2').then(function(output){
+  //     cb(output);
+  //   })
+  // }
+  // factory.getBid3 = function(cb){
+  //   $http.get('/bid/get_bid3').then(function(output){
+  //     cb(output);
 
-    })
-  }
+  //   })
+  // }
 
   factory.endBid = function(cb){
     $http.get('/bid/endBid').then(function(output){

@@ -1,6 +1,6 @@
 <div ng-controller='userController'>
   <div ng-controller='bidController'>
-    <div id='product1'>
+    <div class='product'>
       <p>Product 1</p>
 
       <img src="https://pbs.twimg.com/profile_images/775416954584608768/OUnpD7x_.jpg" style='width: 100px'>
@@ -14,28 +14,30 @@
       <br>
 
       Current Bids:
-      <table>
+
+      <table align='center'>
         <tr>
           <th>Name</th>
           <th>Bid</th>
         </tr>
-        <tr>
-          <td ng-repeat='bid in lists1 | filter:search1'>
+        <tr ng-repeat='bid in lists1'>
+          <td>
             <p ng-repeat='u in bid._user'>{{u.name}}</p>
           </td>
-          <td ng-repeat='bid in lists1 | filter:search1'>
+          <td>
             <p ng-repeat='p in bid.price'>${{p}}</p>
           </td>
         </tr>
       </table>
 
       <br>
+      
       Search:
-      <p>**You may search with name of the bidder or amount of bid placed (omit $ sign)** </p>
       <input type='text' ng-model='search1' placeholder='search'>
+      <p>**You may search with name of the bidder or amount of bid placed (omit $ sign)** </p>
     </div>
 
-    <div id='product2'>
+    <div class='product'>
       <p>Product 2</p>
 
       <img src="https://pbs.twimg.com/profile_images/775416954584608768/OUnpD7x_.jpg" style='width: 100px'>
@@ -49,27 +51,27 @@
       <br>
 
       Current Bids:
-      <table>
+      <table align='center'>
         <tr>
           <th>Name</th>
           <th>Bid</th>
         </tr>
-        <tr>
-          <td ng-repeat='bid in lists2 | filter:search2'>
-            <p ng-repeat='u in bid._user'>{{u.name}}</p>
+        <tr ng-repeat='bid in lists2'>
+          <td>
+            <p ng-repeat='u in bid._user | filter:search2'>{{u.name}}</p>
           </td>
-          <td ng-repeat='bid in lists2 | filter:search2'>
-            <p ng-repeat='p in bid.price'>${{p}}</p>
+          <td>
+            <p ng-repeat='p in bid.price  '>${{p}}</p>
           </td>
         </tr>
       </table>
       <br>
       Search:
-      <p>**You may search with name of the bidder or amount of bid placed (omit $ sign)** </p>
       <input type='text' ng-model='search2' placeholder='search'>
+      <p>**You may search with name of the bidder or amount of bid placed (omit $ sign)** </p>
     </div>
 
-    <div id='product3'>
+    <div class='product'>
       <p>Product 3</p>
 
       <img src="https://pbs.twimg.com/profile_images/775416954584608768/OUnpD7x_.jpg" style='width: 100px'>
@@ -83,25 +85,27 @@
       <br>
 
       Current Bids:
-      <table>
+      <table align='center'>
         <tr>
           <th>Name</th>
           <th>Bid</th>
         </tr>
-        <tr>
-          <td ng-repeat='bid in lists3 | filter:search3'>
+        <tr ng-repeat='bid in lists3'>
+          <td>
             <p ng-repeat='u in bid._user'>{{u.name}}</p>
           </td>
-          <td ng-repeat='bid in lists3 | filter:search3'>
+          <td>
             <p ng-repeat='p in bid.price'>${{p}}</p>
           </td>
         </tr>
       </table>
       <br>
       Search:
-      <p>**You may search with name of the bidder or amount of bid placed (omit $ sign)** </p>
       <input type='text' ng-model='search3' placeholder='search'>
+      <p>**You may search with name of the bidder or amount of bid placed (omit $ sign)** </p>
     </div>
+
+    <br>
 
     <button ng-click='endBid()'>End Bid</button>
   </div>

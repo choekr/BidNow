@@ -35,35 +35,35 @@ module.exports = (function(){
       })
     },
 
-    getBid1: function(req,res){
-      Bid.findOne({item: 'product1'}).populate({path:'_user'}).exec(function(err,data){
-        if(err){
-          console.log(err);
-        } else {
-          res.json(data);
-        }
-      })
-    },
+    // getBid1: function(req,res){
+    //   Bid.findOne({item: 'product1'}).populate({path:'_user'}).exec(function(err,data){
+    //     if(err){
+    //       console.log(err);
+    //     } else {
+    //       res.json(data);
+    //     }
+    //   })
+    // },
 
-    getBid2: function(req,res){
-      Bid.findOne({item: 'product2'}).populate({path:'_user'}).exec(function(err,data){
-        if(err){
-          console.log(err);
-        } else {
-          res.json(data);
-        }
-      })
-    },
+    // getBid2: function(req,res){
+    //   Bid.findOne({item: 'product2'}).populate({path:'_user'}).exec(function(err,data){
+    //     if(err){
+    //       console.log(err);
+    //     } else {
+    //       res.json(data);
+    //     }
+    //   })
+    // },
 
-    getBid3: function(req,res){
-      Bid.findOne({item: 'product3'}).populate({path:'_user'}).exec(function(err,data){
-        if(err){
-          console.log(err);
-        } else {
-          res.json(data);
-        }
-      })
-    },
+    // getBid3: function(req,res){
+    //   Bid.findOne({item: 'product3'}).populate({path:'_user'}).exec(function(err,data){
+    //     if(err){
+    //       console.log(err);
+    //     } else {
+    //       res.json(data);
+    //     }
+    //   })
+    // },
 
     reset: function(req,res){
       Bid.remove({}, function(err){

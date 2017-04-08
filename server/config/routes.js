@@ -12,9 +12,9 @@ module.exports = function(app){
 
   app.get('/bid/get_all', bid.getAll);
 
-  app.get('/bid/get_bid1', bid.getBid1);
-  app.get('/bid/get_bid2', bid.getBid2);
-  app.get('/bid/get_bid3', bid.getBid3);
+  // app.get('/bid/get_bid1', bid.getBid1);
+  // app.get('/bid/get_bid2', bid.getBid2);
+  // app.get('/bid/get_bid3', bid.getBid3);
 
   app.post('/bid/reset', bid.reset);
 

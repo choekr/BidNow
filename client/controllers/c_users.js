@@ -4,9 +4,12 @@ app.controller('userController', function($scope, userFactory, $location, $rootS
 
   userFactory.checkStatus(function(data){
     if(data != null){
+      console.log('checkstatus')
       $scope.curUser = data;
       $rootScope.loggedIn = true;
-      // $location.url('/dash');
+      if($location.$$path == '/'){
+        $location.url('/dash');
+      }
     }
   })
 
